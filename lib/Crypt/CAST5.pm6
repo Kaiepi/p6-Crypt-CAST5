@@ -509,6 +509,11 @@ CAST-128 algorithm.
 
 =head1 METHODS
 
+=item B<new>(Str I<$key> --> Blob)
+
+Constructs a new instance of Crypt::CAST5 using the given key. The key must be
+5-16 characters long.
+
 =item B<encode>(Blob I<$in> --> Blob)
 
 Encodes C<$in> using CAST-128 encryption and returns the result.

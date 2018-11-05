@@ -25,6 +25,10 @@ Crypt::CAST5 is a library that handles encryption and decryption using the CAST-
 METHODS
 =======
 
+  * **new**(Str *$key* --> Blob)
+
+Constructs a new instance of Crypt::CAST5 using the given key. The key must be 5-16 characters long.
+
   * **encode**(Blob *$in* --> Blob)
 
 Encodes `$in` using CAST-128 encryption and returns the result.
