@@ -2,16 +2,16 @@
   "authors" : [
     "Ben Davies"
   ],
-  "build-depends" : [ ],
+  "build-depends" : [ "LibraryMake", "Shell::Command" ],
   "depends" : [ ],
-  "description" : "CAST-128 encryption library",
+  "description" : "CAST5 encryption library",
   "license" : "Artistic-2.0",
   "name" : "Crypt::CAST5",
-  "perl" : "6.c",
+  "perl" : "6.d",
   "provides" : {
     "Crypt::CAST5" : "lib/Crypt/CAST5.pm6"
   },
-  "resources" : [ ],
+  "resources" : [ "libraries/cast5" ],
   "source-url" : "https://github.com/Kaiepi/p6-Crypt-CAST5",
   "tags" : [ "Crypt" ],
   "test-depends" : [ ],

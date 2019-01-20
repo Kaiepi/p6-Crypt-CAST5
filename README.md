@@ -3,39 +3,40 @@
 NAME
 ====
 
-Crypt::CAST5 - CAST-128 encryption library
+Crypt::CAST5 - CAST5 encryption library
 
 SYNOPSIS
 ========
 
     use Crypt::CAST5;
 
-    my Crypt::CAST5 $cast5   .= new: 'ayy lmao';
-    my Str          $in       = 'ayy lmao';
+    my Crypt::CAST5 $cast5   .= new: 'ayy lmao'.encode;
+    my Str          $in       = 'sup my dudes';
     my Blob         $encoded  = $cast5.encode: $in.encode;
     my Blob         $decoded  = $cast5.decode: $encoded;
     my Str          $out      = $decoded.decode;
-    say $out; # ayy lmao
+
+    say $out; # OUTPUT: sup my dudes
 
 DESCRIPTION
 ===========
 
-Crypt::CAST5 is a library that handles encryption and decryption using the CAST-128 algorithm.
+Crypt::CAST5 is a library that handles encryption and decryption using the CAST5 algorithm. Currently, only the ECB block cipher mode is supported.
 
 METHODS
 =======
 
-  * **new**(Str *$key* --> Blob)
+  * **new**(Blob *$key*)
 
-Constructs a new instance of Crypt::CAST5 using the given key. The key must be 5-16 characters long.
+Constructs a new instance of Crypt::CAST5 using the given key. The key must be 5-16 characters long. 
 
-  * **encode**(Blob *$in* --> Blob)
+  * **encode**(Blob *$plaintext* --> Blob)
 
-Encodes `$in` using CAST-128 encryption and returns the result.
+Encodes `$plaintext` using CAST5 encryption.
 
-  * **decode**(Blob *$in* --> Blob)
+  * **decode**(Blob *$ciphertext* --> Blob)
 
-Decodes `$in` using CAST-128 encryption and returns the result.
+Decodes `$ciphertext` using CAST5 decryption.
 
 AUTHOR
 ======

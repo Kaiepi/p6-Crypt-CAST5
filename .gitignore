@@ -2,7 +2,12 @@
 /src/*.o
 /src/Makefile
 /.panda-work
-/resources/*.so
-/resources/*.dylib
+/resources/**/*.so
+/resources/**/*.dylib
 .precomp/
 /Crypt-CAST5-*
+
+*.sw*
+*.core
+*.o
+Makefile
