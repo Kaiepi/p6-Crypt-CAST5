@@ -15,5 +15,5 @@
   "source-url" : "https://github.com/Kaiepi/p6-Crypt-CAST5",
   "tags" : [ "Crypt" ],
   "test-depends" : [ ],
-  "version" : "0.0.1"
+  "version" : "0.1.0"
 }

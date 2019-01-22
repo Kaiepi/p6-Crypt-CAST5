@@ -1,6 +1,6 @@
 use v6.d;
 use NativeCall;
-unit class Crypt::CAST5:ver<0.0.1>:auth<github:Kaiepi> is repr('CPointer');
+unit class Crypt::CAST5:ver<0.1.0>:auth<github:Kaiepi> is repr('CPointer');
 
 sub LIB(--> Str) { state $ = %?RESOURCES<libraries/cast5>.absolute }
 
